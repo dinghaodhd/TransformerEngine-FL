@@ -155,8 +155,8 @@ class MetaxBackend(TEFLBackendBase):
         return _check_metax_available()
 
     def get_flash_attention_class(self):
-        from transformer_engine_metax.pytorch.attention.dot_product_attention.backends import FlashAttention
-        return FlashAttention
+        from .flash_attention import FlashAttentionMETAX
+        return FlashAttentionMETAX
 
     def quantize(
         self,
